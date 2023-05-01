@@ -1,15 +1,4 @@
-import { HeatmapLayer, LineLayer } from 'react-map-gl'
-
-export const layerStyle = {
-  id: 'point',
-  type: 'circle',
-  paint: {
-    'circle-radius': 2,
-    'circle-color': '#883F4A',
-    'circle-stroke-color': '#FFF7D6',
-    'circle-stroke-width': 1,
-  },
-}
+import { HeatmapLayer } from 'react-map-gl'
 
 export const MAX_ZOOM_LEVEL = 9
 
@@ -77,30 +66,6 @@ export const getHeatmapLayer = (empire: 'rus' | 'ger' | 'aus'): HeatmapLayer => 
       'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 0, 2, MAX_ZOOM_LEVEL, 20],
       // Transition from heatmap to circle layer by zoom level
       'heatmap-opacity': ['interpolate', ['linear'], ['zoom'], 7, 1, 9, 0],
-    },
-  }
-}
-
-export const getMultipolygonLayer = (): LineLayer => {
-  return {
-    id: '1770',
-    type: 'line',
-    layout: {
-      'line-join': 'bevel',
-      'line-cap': 'round',
-    },
-    paint: {
-      'line-color': '#EF653C',
-      'line-width': 2,
-      'line-dasharray': [2, 2],
-    },
-    metadata: {
-      name: 'Granice Historyczne',
-      labels: {
-        10: 'Custom label for value 10',
-        other: '< 1k/km²',
-        an_item_to_hide: false,
-      },
     },
   }
 }

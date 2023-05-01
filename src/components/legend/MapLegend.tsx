@@ -1,4 +1,8 @@
-import { legendItemsArray } from '../map-component/constants'
+export const legendItemsArray = [
+  { name: 'Cesarstwo Niemieckie', color: 'rgb(127, 218, 124)' },
+  { name: 'Austro-Węgry', color: 'rgb(87, 142, 247)' },
+  { name: 'Imperium Rosyjskie', color: 'rgb(253, 201, 68)' },
+]
 
 const title =
   'Miejscowości rodzinne żołnierzy poległych, rannych, jeńców lub zaginionych w I wojnie światowej o nazwisku Domański'

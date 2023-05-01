@@ -1,7 +1,7 @@
 import { Layer, Source } from 'react-map-gl'
 
-import { empData } from '../map-component/constants'
-import { getHeatmapLayer } from '../map-component/map-styles'
+import { getHeatmapLayer } from './layer-styles'
+import { empData } from './constants'
 
 export default function LossesSource() {
   return (
