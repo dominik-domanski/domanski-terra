@@ -3,7 +3,7 @@ import { Layer, Source } from 'react-map-gl'
 import { getHeatmapLayer } from './layer-styles'
 import { empData } from './constants'
 
-export default function LossesSource() {
+export function LossesSource() {
   return (
     <>
       {Object.values(empData).map(({ emp, data }) => (
