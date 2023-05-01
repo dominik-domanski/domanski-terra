@@ -1,0 +1,63 @@
+{
+  "name": "fe-compass",
+  "version": "1.0.0",
+  "description": "Command and Control project (3 generation)",
+  "scripts": {
+    "build": "webpack --config config/webpack.prod.js",
+    "format": "prettier --cache --write",
+    "install-husky": "husky install && chmod +x .husky/pre-commit && chmod +x .husky/pre-push",
+    "lint": "eslint . --fix --max-warnings=0",
+    "prod": "webpack serve --config config/webpack.prod.js",
+    "start": "webpack serve  --config config/webpack.dev.js --mode development",
+    "test": "jest --silent"
+  },
+  "keywords": [],
+  "author": "Dominik Domanski",
+  "license": "MIT",
+  "dependencies": {
+    "mapbox-gl": "^2.14.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-map-gl": "^7.0.23"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-transform-react-jsx": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.21.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
+    "interpolate-html-plugin": "^4.0.0",
+    "lint-staged": "^13.2.0",
+    "postcss-loader": "^7.2.4",
+    "prettier": "^2.8.4",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "typescript": "^4.9.5",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss}": [
+      "eslint --fix",
+      "yarn format"
+    ]
+  }
+}

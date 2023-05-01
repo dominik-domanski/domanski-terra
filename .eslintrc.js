@@ -1,0 +1,55 @@
+module.exports = {
+  root: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  env: {
+    browser: true,
+    amd: true,
+    node: true,
+  },
+  globals: {
+    JSX: true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
+  plugins: ['jest'],
+  rules: {
+    'prettier/prettier': ['warn', {}, { usePrettierrc: true }],
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'jsx-a11y/alt-text': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    '@typescript-eslint/ban-ts-comment': 'warn',
+    '@typescript-eslint/ban-types': 'warn',
+    'jsx-a11y/no-static-element-interactions': 'warn',
+    'react/jsx-key': 'warn',
+    'react/no-unknown-property': 'warn',
+    'react/no-unescaped-entities': 'warn',
+    '@typescript-eslint/no-var-requires': 'warn',
+    'no-dupe-keys': 'warn',
+    'react/display-name': 'off',
+    'no-undef': 'warn',
+    'prefer-const': 'warn',
+    'import/first': 'off',
+    '@typescript-eslint/no-empty-function': 'warn',
+  },
+}
