@@ -10,7 +10,7 @@ export const App = (): JSX.Element => (
   <StrictMode>
     <MapboxMap>
       <SpatialDistributionView />
-      <GreatWarLossesView />
+      {/* <GreatWarLossesView /> */}
     </MapboxMap>
   </StrictMode>
 )
